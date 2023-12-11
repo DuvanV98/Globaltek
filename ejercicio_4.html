@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 4</title>
+
+    <script>
+
+alert("Grupos inventario: dairy, cleaning y grain");
+
+let dairy_products = [];
+let dairy_stock = [];
+
+let cleaning_products = [];
+let cleaning_stock = [];
+
+let grain_products = [];
+let grain_stock = [];
+
+let n = 1;
+
+while (n > 0) {
+  alert("Sistema de inventario, ingrese una opción: ");
+  alert("1. Agregar producto");
+  alert("2. Ver reporte de inventario");
+  alert("3. Salir");
+
+  let opcion = prompt("Digite su opcion: ");
+
+  if (opcion == 1) {
+    let nombre_producto = prompt("Digite el nombre de producto que quiere agregar: ");
+    let cantidad = prompt("Digite la cantidad del producto a agregar: ");
+    let grupo = prompt("Digite el grupo al que pertenece el producto: ");
+
+    if (grupo === "dairy") {
+      dairy_products.push(nombre_producto);
+      dairy_stock.push(cantidad);
+    } else if (grupo === "cleaning") {
+      cleaning_products.push(nombre_producto);
+      cleaning_stock.push(cantidad);
+    } else if (grupo === "grain") {
+      grain_products.push(nombre_producto);
+      grain_stock.push(cantidad);
+    } else {
+      alert("Grupo no válido. Los grupos válidos son: dairy, cleaning, grain");
+    }
+
+    continue;
+  }
+
+  if (opcion == 2) {
+    let grupo_inventario = prompt("Elija el grupo del cual desea ver los productos y las existencias: ");
+    alert("El reporte de inventario es el siguiente: ");
+
+    if (grupo_inventario === "dairy") {
+      alert("Productos: " + dairy_products);
+      alert("Existencias: " + dairy_stock);
+    } else if (grupo_inventario === "cleaning") {
+      alert("Productos: " + cleaning_products);
+      alert("Existencias: " + cleaning_stock);
+    } else if (grupo_inventario === "grain") {
+      alert("Productos: " + grain_products);
+      alert("Existencias: " + grain_stock);
+    } else {
+      alert("Grupo no válido. Los grupos válidos son: dairy, cleaning, grain");
+    }
+  }
+
+  if (opcion == 3) {
+    alert("Usted se ha salido del inventario");
+    break;
+  }
+}
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
