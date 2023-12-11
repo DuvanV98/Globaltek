@@ -1,0 +1,2 @@
+# Globaltek
+Prueba técnica empresarial
